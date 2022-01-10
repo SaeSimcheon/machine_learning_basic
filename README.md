@@ -24,8 +24,12 @@
 - Orientation
 ### 2주차
 - Decision tree
-- Titanic (1)
+- Titanic (1) - Searching code
 ### 3주차
+- Bagging
+- Random Forest
+- Adaboost
+- Titanic (2) - Analyze Codes before modeing.
 ### 4주차
 ### 5주차
 ### 6주차
