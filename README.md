@@ -29,7 +29,7 @@
 - Bagging
 - Random Forest
 - Adaboost
-- Titanic (2) - Analyze Codes before modeing.
+- Titanic (2) - Analyze Codes before modeing. [code1](https://www.kaggle.com/gunesevitan/titanic-advanced-feature-engineering-tutorial/notebook), [code2](https://www.kaggle.com/yassineghouzam/titanic-top-4-with-ensemble-modeling/notebook)
 ### 4주차
 ### 5주차
 ### 6주차
