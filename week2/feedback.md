@@ -25,8 +25,10 @@
 
 
 ## 코드 + 알파(벌칙)
-## 해당 주차 sklearn 문서 요약 방식은 자유. 전체 내용 포괄할 수 있게/ 유저 가이드까지(벌칙)
+- 교재 코드 하는 사람이 estimator parameter 정리까지
 
+## 해당 주차 sklearn 문서 요약 방식은 자유. 전체 내용 포괄할 수 있게/ 유저 가이드까지(벌칙)
+- [관련 링크](https://scikit-learn.org/stable/modules/ensemble.html?highlight=adaboost#adaboost)
 ## 궁금한 것들(벌칙)
 
 동경
