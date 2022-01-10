@@ -1,0 +1,80 @@
+train, test를 concat으로 합친 후 다시 train, test로 나눔
+      -> index를 train+test 데이터에서 재배열하기 위함
+
+
+
+
+* missing value 처리
+
+missing value : age 와 cabin에 많고 embark와 fare에 극소수있음
+
+age : Pclass변수와 가장 correlation(0.408106) 높기 때문에 
+       전체에서 median age값을 채워넣는 것보다 Pclass변수를 고려하여 median age로 채우는게 나음
+      ( Pclass와 survived 변수간 correlation 0.338481)
+
+      보다 정교하게 하기 위해서 그 다음 변수인 sex변수도 고려함
+      sex와 pclass간 category간 조합에 따른 median age는 분명한 차이가 있음
+
+       Median age of Pclass 1 females: 36.0
+       Median age of Pclass 1 males: 42.0
+       Median age of Pclass 2 females: 28.0
+       Median age of Pclass 2 males: 29.5
+       Median age of Pclass 3 females: 22.0
+       Median age of Pclass 3 males: 25.0
+       Median age of all passengers: 28.0
+
+    -> 따라서 sex와 pclass간 category간 조합에 따른 median age로 age의 missing value값 채움
+
+embarked : 이 변수에 대한 missing value 개수는 2개인데,
+               공교롭게도 두 사람은 first class이며 ticket number도 같다. 즉, 같은 cabin이라는 것
+               이 둘은 서로 아는 사람이고 같은 선착장에서 탑승했다고 추측 가능하다.
+               결정적으로 스톤이라는 여성은 사우스햄튼에서 그녀의 가정부(Amelie)와 탑승했으며
+               같은 pclass, 같은 cabin number라는 사실이 구글링을 통해 확인되었다고 함
+               그래서 두 데이터에 대한 embarked의 missing value는 S(사우스햄튼)으로 채움
+
+Fare : 단 하나의 missing value가 있는데, fare 변수는 pclass 그리고 가족의 size(parch,sibsp)와 
+        관련이 있음을 생각할 수 있음. 해당 탑승객은 가족이 없고 pclass는 3이어서
+        pclass가 3이면서 가족이 없는 group에 대한 median fare로 missing value 처리함
+
+cabin : missing value가 가장 많은 변수
+         몇몇 특정 cabin에서 survival rates가 높기 때문에 중요한 변수가 될 것
+         cabin변수 값의 앞 문자는 cabin이 위치한 갑판을 나타냄
+         중심부에서 멀어지는 갑판은 pclass1에 해당함 
+         (가장자리에서 중심부로 갈수록 계단까지의 거리가 멀어지기 때문에 cabin은 중요한 변수)
+        
+         cabin 변수 값의 첫 문자만 따서 Deck이라는 변수 생성 ( missing value는 M으로 표기)
+         deck 변수에서 T에는 한명 있는데 A와 특징이 비슷하므로 A로 넘김
+          A, B and C decks are labeled as ABC because all of them have only 1st class passengers
+          D and E decks are labeled as DE because both of them have similar passenger class distribution and same survival rate
+          F and G decks are labeled as FG because of the same reason above
+          M deck doesn't need to be grouped with other decks because it is very different from others and has the lowest survival rate.
+     
+        -> cabin으로 만든 Deck 변수의 category  : M / ABC / DE  /FG
+        -> cabin변수는 이제 drop시킴
+
+##################################
+
+Title : name 변수에서 앞에 따서 만듦
+      - miss,ms,mrs,lady,the countess -> ms,miss,mrs   (여성)
+      * mme, dona, mile은 실제 이름의 일부라 제외 <- , 기준으로 split되어서 title에 들어가 있는 것
+   
+      -  Dr, Col, Major, Jonkheer, Capt, Sir, Don and Rev   -> Dr/Military/Noble/Clergy  (비슷한 특성)
+
+      - Mr (남성)
+
+      - Master (male passengers below age 26)
+
+Is.married : Name변수에서 만듦
+
+
+
+
+The categorical features (Pclass, Sex, Deck, Embarked, Title)  
+Age and Fare features  ordinal (unlike the previous ones.)
+
+
+
+
+random forest로 모델 돌림
+
+- 정한 코드를 주석으로 설명을 한 파일을 다음주부터 colab에 jupyter notebook으로 올려서 진행
