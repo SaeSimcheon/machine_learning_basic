@@ -43,7 +43,11 @@
 - outer -> default
 
 #### Combine DataFrame objects with overlapping columns and return only those that are shared by passing inner to the join keyword argument.
+- outer
+
 ![image](https://user-images.githubusercontent.com/49121293/149734916-05209f23-796f-4824-b66b-306c66846cf2.png)
+- inner
+
 ![image](https://user-images.githubusercontent.com/49121293/149734995-4c53ddb6-6bec-44c9-83ee-f6e3445123e8.png)
 
 
