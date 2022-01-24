@@ -53,7 +53,6 @@
 - LightGBM, CatBosst 강의 + 관련된 자료 찾아서 공부
 - 구두시험 
 
-- LightGBM, CatBosst 강의 + 관련된 자료 찾아서 공부
 - Titanic 각자 튜토리얼 
 
 - pandas , numpy 문제 풀어오기
