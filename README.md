@@ -49,6 +49,20 @@
 - pandas numpy 문제 출제.
 
 ### 5주차
+
+- LightGBM, CatBosst 강의 + 관련된 자료 찾아서 공부
+- 구두시험 
+
+- LightGBM, CatBosst 강의 + 관련된 자료 찾아서 공부
+- Titanic 각자 튜토리얼 
+
+- pandas , numpy 문제 풀어오기
+- pandas , numpy 문제 여러 함수 조합해서 난이도 높게 출제해오기
+
+- 2/3 6시에 만나요~
+
+
+
 ### 6주차
 ### 7주차
 ### 8주차
