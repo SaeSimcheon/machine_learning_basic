@@ -31,6 +31,23 @@
 - Adaboost
 - Titanic (2) - Analyze Codes before modeing. [code1](https://www.kaggle.com/gunesevitan/titanic-advanced-feature-engineering-tutorial/notebook), [code2](https://www.kaggle.com/yassineghouzam/titanic-top-4-with-ensemble-modeling/notebook)
 ### 4주차
+- Titanic (3)
+	- 가장 먼저 pandas numpy 함수 추려서 단톡방에 올리기.
+	- 15분짜리 발표 준비.
+	- 준비 및 글 분석 과정에서 스스로 생각한 점. (굳이 잘 정리하려 하지 않아도 됨)
+	- 가능하면 전체, 만약 어렵다면 전처리까지.
+	- submission 1회 해오기.(권장)
+
+- GBM, XGBoost 진도
+    - GBM
+    - XGBoost
+    
+      - https://xgboost.readthedocs.io/en/stable/tutorials/model.html
+      - https://xgboost.readthedocs.io/en/stable/tutorials/param_tuning.html#
+      - https://towardsdatascience.com/getting-started-with-xgboost-in-scikit-learn-f69f5f470a97
+- 구술 문제 
+- pandas numpy 문제 출제.
+
 ### 5주차
 ### 6주차
 ### 7주차
